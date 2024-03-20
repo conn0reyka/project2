@@ -13,13 +13,11 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController _characterController;
 
-    // Start is called before the first frame update
     void Start()
     {
       _characterController =   GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
        _moveVector = Vector3.zero;
