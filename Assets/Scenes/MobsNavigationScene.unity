@@ -1006,6 +1006,7 @@ MonoBehaviour:
   - {fileID: 245417836}
   - {fileID: 1168843452}
   viewAngle: 90
+  damage: 30
 --- !u!195 &1268885703
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1020,7 +1021,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2128,6 +2129,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4362849950269162425, guid: 39c2a5084329e0847ab6b423540416f6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6293992879963549457, guid: 39c2a5084329e0847ab6b423540416f6,
         type: 3}
       propertyPath: m_RootOrder
