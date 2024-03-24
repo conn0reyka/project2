@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1991163949552036050}
+  - component: {fileID: 1975045618064237729}
+  - component: {fileID: 3145259969243516875}
   m_Layer: 0
   m_Name: potion
   m_TagString: Untagged
@@ -35,6 +37,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1975045618064237729
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544259264792011924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.2, z: 0}
+--- !u!114 &3145259969243516875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544259264792011924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ab4ccdd2a1b76143a9e06e2a6e3b6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1831093820403970461
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,7 +74,6 @@ GameObject:
   - component: {fileID: 4645167873427589429}
   - component: {fileID: 747228626125398838}
   - component: {fileID: 984227399781032443}
-  - component: {fileID: 109523722582013099}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -115,19 +142,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &109523722582013099
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831093820403970461}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1942765663271339471
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +153,6 @@ GameObject:
   - component: {fileID: 8136009159875253347}
   - component: {fileID: 6725170610526522961}
   - component: {fileID: 6467753468959676308}
-  - component: {fileID: 6183738925123446567}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -208,19 +221,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &6183738925123446567
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942765663271339471}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6208899662690911486
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +232,6 @@ GameObject:
   - component: {fileID: 423054136715273981}
   - component: {fileID: 8541474034928978106}
   - component: {fileID: 4390227936211778530}
-  - component: {fileID: 1232189137812465727}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -301,20 +300,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &1232189137812465727
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6208899662690911486}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &6528061701533490205
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +311,6 @@ GameObject:
   - component: {fileID: 1915116130481217860}
   - component: {fileID: 5537301294108218114}
   - component: {fileID: 7884045773734814516}
-  - component: {fileID: 1703658061173371791}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -395,20 +379,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &1703658061173371791
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6528061701533490205}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &8774987549600205367
 GameObject:
   m_ObjectHideFlags: 0

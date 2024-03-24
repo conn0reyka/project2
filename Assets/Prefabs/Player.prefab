@@ -307,9 +307,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2912427659812735343}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 1.3, z: -0.03}
+  m_LocalPosition: {x: 0.6, y: 1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7769645580903683877}
   m_Father: {fileID: 6293992879963549457}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -556,6 +557,7 @@ GameObject:
   - component: {fileID: 6293992879963549463}
   - component: {fileID: 2057668149605382547}
   - component: {fileID: 8962302922438075992}
+  - component: {fileID: 1814441087892304398}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -613,7 +615,7 @@ CharacterController:
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!114 &6293992879963549463
@@ -631,6 +633,7 @@ MonoBehaviour:
   gravity: 9.8
   jumpForce: 5
   speed: 4
+  animator: {fileID: 7239833213736719134}
 --- !u!114 &2057668149605382547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,6 +665,42 @@ MonoBehaviour:
   valueRectTransform: {fileID: 4809723970648250751}
   gameplayUI: {fileID: 8816504848495453646}
   gameOverScreen: {fileID: 8350780637469740176}
+  animator: {fileID: 7239833213736719134}
+--- !u!114 &1814441087892304398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6293992879963549459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9088f6a86a3e364181fcd72fdb4c01e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: -4094182954869284196, guid: 10d92dc02712aab47af3a3bf4ad540d9,
+    type: 3}
+  grenadeSourceTransform: {fileID: 7769645580903683877}
+  force: 500
+--- !u!95 &7239833213736719134
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6600492533169045000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e1c92ecef188ab14485c710828f587cd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7978737524152383576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,6 +1070,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &8941958423974021101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7769645580903683877}
+  m_Layer: 0
+  m_Name: GrenadeSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7769645580903683877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8941958423974021101}
+  m_LocalRotation: {x: -0.17364825, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6543923954616158807}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -20, y: 0, z: 0}
 --- !u!1 &8975249039484871381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1251,12 @@ PrefabInstance:
 --- !u!4 &5823849555092366514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6ced24aa0e82a384d9f75e96922b0f19,
+    type: 3}
+  m_PrefabInstance: {fileID: 6293992878438187865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6600492533169045000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6ced24aa0e82a384d9f75e96922b0f19,
     type: 3}
   m_PrefabInstance: {fileID: 6293992878438187865}
   m_PrefabAsset: {fileID: 0}
