@@ -12,7 +12,9 @@ public class EnemyAI : MonoBehaviour
     public PlayerController player;
     public List<Transform> patrolPoints;
     public float viewAngle;
-    public float damage = 30;
+    public float damage = 40;
+    public float attackDistance = 1;
+    public Animator animator;
 
     void Start()
     {
@@ -34,9 +36,16 @@ public class EnemyAI : MonoBehaviour
         {
             if(_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
             {
-                _playerHealth.DealDamage(damage * Time.deltaTime);
+                animator.SetTrigger("attack");
             }
         }
+    }
+
+    public void AttackDamage()
+    {
+        if(!_isPlayerNoticed) return;
+        if(_navMeshAgent.remainingDistance > (_navMeshAgent.stoppingDistance + attackDistance)) return;
+        _playerHealth.DealDamage(damage);
     }
 
     private void PickNewAgentPoint()
@@ -74,7 +83,6 @@ public class EnemyAI : MonoBehaviour
                 {
                      _isPlayerNoticed = true;
                 }
-                
             }
         }
     }

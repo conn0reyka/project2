@@ -1,10 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public float delay;
     public float value = 100;
+    public Animator animator;
 
     public PlayerProgress playerProgress;
 
@@ -20,7 +22,20 @@ public class EnemyHealth : MonoBehaviour
         value -= damage;
         if (value <= 0)
         {
-            Destroy(gameObject);
+            EnemyDeath();
         }
+        else
+        {
+            animator.SetTrigger("hit");
+        }
+    }
+
+    private void EnemyDeath()
+    {
+        animator.SetTrigger("death");
+        GetComponent<EnemyAI>().enabled = false;
+        GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<CapsuleCollider>().enabled = false;
+        Destroy(gameObject, delay); 
     }
 }

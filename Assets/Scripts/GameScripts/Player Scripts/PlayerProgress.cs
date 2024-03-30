@@ -5,15 +5,25 @@ using TMPro;
 
 public class PlayerProgress : MonoBehaviour
 {
+    public GameObject gameplayUI;
+    public GameObject youWonScreen;
+
     public List<PlayerProgressLevel> levels;
 
     public RectTransform experienceValueRectTransform;
     public TextMeshProUGUI levelValueTMP;
+    public Animator animator;
 
     private int _levelValue = 0;
 
     private float _experienceCurrentValue = 0;
     private float _experienceTargetValue = 100;
+
+    private void Update()
+    {
+        if(_levelValue != 10) return;
+        PlayerWon();
+    }
 
     private void Start()
     {
@@ -51,5 +61,15 @@ public class PlayerProgress : MonoBehaviour
     {
         experienceValueRectTransform.anchorMax = new Vector2(_experienceCurrentValue/_experienceTargetValue, 1);
         levelValueTMP.text = _levelValue.ToString();
+    }
+
+    private void PlayerWon()
+    {
+        gameplayUI.SetActive(false);
+        youWonScreen.SetActive(true);
+        GetComponent<PlayerController>().enabled = false;
+        GetComponent<FireballCaster>().enabled = false;
+        GetComponent<CameraRotation>().enabled = false;
+        animator.SetTrigger("victory");
     }
 }

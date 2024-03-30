@@ -26,7 +26,6 @@ public class PlayerHealth : MonoBehaviour
         {
             PlayerIsDead();
         }
-
         DrawHealthBar();
     }
 
