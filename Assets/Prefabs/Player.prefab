@@ -1200,28 +1200,28 @@ MonoBehaviour:
     experienceForNextLevel: 100
   - fireballDamage: 15
     grenadeDamage: -1
-    experienceForNextLevel: 150
+    experienceForNextLevel: 100
   - fireballDamage: 20
     grenadeDamage: 50
-    experienceForNextLevel: 250
+    experienceForNextLevel: 150
   - fireballDamage: 30
     grenadeDamage: 75
-    experienceForNextLevel: 400
+    experienceForNextLevel: 250
   - fireballDamage: 40
     grenadeDamage: 100
-    experienceForNextLevel: 1000
+    experienceForNextLevel: 400
   - fireballDamage: 50
     grenadeDamage: 125
-    experienceForNextLevel: 2000
+    experienceForNextLevel: 700
   - fireballDamage: 70
     grenadeDamage: 175
-    experienceForNextLevel: 3500
+    experienceForNextLevel: 1000
   - fireballDamage: 90
     grenadeDamage: 225
-    experienceForNextLevel: 5000
+    experienceForNextLevel: 2000
   - fireballDamage: 125
     grenadeDamage: 300
-    experienceForNextLevel: 10000
+    experienceForNextLevel: 3000
   experienceValueRectTransform: {fileID: 1325993397225411999}
   levelValueTMP: {fileID: 973549875016507549}
   animator: {fileID: 7239833213736719134}

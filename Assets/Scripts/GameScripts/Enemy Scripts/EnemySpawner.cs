@@ -12,19 +12,19 @@ public class EnemySpawner : MonoBehaviour
     public float delay = 5;
 
     private List<Transform> _spawnPoints;
-    private List<EnemyAI> _enemies;
 
     private float _timeLastSpawned;
 
     private void Start()
     {
         _spawnPoints = new List<Transform>(transform.GetComponentsInChildren<Transform>());
-        _enemies = new List<EnemyAI>();
     }
 
     private void Update()
     {
-        if(_enemies.Count >= enemiesMaxCount) return;
+        var foundObjects = Object.FindObjectsOfType<EnemyHealth>();
+        int count = foundObjects.Length;
+        if(count > enemiesMaxCount) return;
         if(Time.time - _timeLastSpawned < delay) return;
 
         CreateEnemy();
@@ -36,7 +36,6 @@ public class EnemySpawner : MonoBehaviour
         enemy.transform.position = _spawnPoints[Random.Range(0, _spawnPoints.Count)].position;
         enemy.player = player;
         enemy.patrolPoints = patrolPoints;
-        _enemies.Add(enemy);
         _timeLastSpawned = Time.time;
     }
 }
